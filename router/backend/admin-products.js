@@ -24,7 +24,7 @@ router.get('/', (req, res)=>{
     productModel.find({})
     .then((x)=>{
         res.render('../views/backend/Products.hbs', {x})
-        console.log(x)
+      
     })
     .catch((y)=>{
         console.log(y)
