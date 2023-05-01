@@ -20,8 +20,8 @@ const app = express()
 //app.engine('hbs',hbs({extname:'hbs'}))
 app.set('view engine', 'hbs')
 
-hbs.registerPartials("views/backend/common")
-hbs.registerPartials("views/frontent/common")
+// hbs.registerPartials("views/backend/common")
+// hbs.registerPartials("views/frontent/common")
 
 dotenv.config({path:'./config.env'})
 app.use(express.static(__dirname+'/public/'))
@@ -108,7 +108,8 @@ hbs.registerHelper('carddetail', function(passedString) {
 //===========BACKEND ROUTER START HERE
 
 
-
+hbs.registerPartials("views/backend/common")
+hbs.registerPartials("views/frontent/common")
 //let admin = require('./router/backend/admin')
 
  let adminpages = require('./router/backend/admin-page')
